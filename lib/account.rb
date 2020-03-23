@@ -1,9 +1,13 @@
 class Account
   def print_statement
-    p "date || credit || debit || balance"
+    "date || credit || debit || balance"
   end
 
   def deposit(amount)
-    p "Deposit processed"
+    "Deposit processed"
+  end
+
+  def withdraw(amount)
+    "Withdrawl processed"
   end
 end
