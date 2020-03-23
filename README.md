@@ -1,5 +1,5 @@
 # Bank - Tech Test
-Original challenge location - (here)[https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md].
+Original challenge location - [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md).
 
 ## Specification
 
