@@ -10,7 +10,7 @@ RSpec.describe Account do
   end
 
   describe "#print_statement" do
-    it "should print a statement" do
+    it "should print an empty statement without other transactions" do
       expect(subject.print_statement).to eq("date || credit || debit || balance")
     end
 
@@ -22,14 +22,27 @@ RSpec.describe Account do
       expect(subject.print_statement).to eq("date || credit || debit || balance\n10/01/2012 || 1000.00 || || 1000.00")
     end
 
-    it "should print mutiple deposits in the statement" do
+    it "should print deposits in the statement in descencding date order" do
       allow(Date).to receive(:today).and_return Date.new(2012,1,10)
       subject.deposit(1000)
 
       allow(Date).to receive(:today).and_return Date.new(2012,1,13)
       subject.deposit(2000)
   
-      expect(subject.print_statement).to eq("date || credit || debit || balance\n13/01/2012 || 1000.00 || || 1000.00\n10/01/2012 || 1000.00 || || 1000.00")
+      expect(subject.print_statement).to eq("date || credit || debit || balance\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00")
+    end
+
+    it "should print an accurate statement with deposits and withdrawls" do
+      allow(Date).to receive(:today).and_return Date.new(2012,1,10)
+      subject.deposit(1000)
+
+      allow(Date).to receive(:today).and_return Date.new(2012,1,13)
+      subject.deposit(2000)
+
+      allow(Date).to receive(:today).and_return Date.new(2012,1,14)
+      subject.withdraw(500)
+  
+      expect(subject.print_statement).to eq("date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00")
     end
 
   end
