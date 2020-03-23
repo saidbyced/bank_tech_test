@@ -21,3 +21,5 @@ New function looks:
 - print statement e.g. account.print_statement
 
 Order of tests: statement, deposit, withdraw. This way can use statement to see result of deposit and withdraw.
+
+Since it is a banking app, I imply that a it should confirm when making a deposit or withdrawl for user reassurance.
