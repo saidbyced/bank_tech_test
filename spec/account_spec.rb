@@ -45,5 +45,16 @@ RSpec.describe Account do
       expect(subject.print_statement).to eq("date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00")
     end
 
+    it "should print an print decimalised values with floating point deposits/withdrawls" do
+      allow(Date).to receive(:today).and_return Date.new(2012,1,10)
+      subject.deposit(1234.56)
+
+      allow(Date).to receive(:today).and_return Date.new(2012,1,14)
+      subject.withdraw(123.45)
+  
+      expect(subject.print_statement).to eq("date || credit || debit || balance\n14/01/2012 || || 123.45 || 1111.11\n10/01/2012 || 1234.56 || || 1234.56")
+    end
+
+
   end
 end
