@@ -2,7 +2,7 @@ require 'date'
 
 class Account
   def print_statement
-    return statement
+    print statement
   end
 
   def deposit(credit)
