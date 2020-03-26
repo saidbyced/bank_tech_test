@@ -17,7 +17,7 @@ Documentation
 ### My response
 
 1. Thanks 😊
-2. Absolutely true. I could have made an easy assumption that these values were 'floating point' ones and not hardcoded the zero values. I will recitfy this.
+2. Absolutely true. I could have made an easy assumption that these values were 'floating point' ones and not hardcoded the zero values. I will recitfy this. ✅
 3. Interesting. I will have a look at unshift as a function and see if I can't come across a more elegant way to store and return the transactions.
 4. As with point 2, I did not make the simple connection that accounts/banking might work with decimal values. I will recitfy this.
 5. Good to know - I think this is something I personally would have clarified with the client prior to undertaking the work. As part of this, if there is no response how do you write good TDD that checks behaviour instead of state? I will invesitgate this and correct my code.

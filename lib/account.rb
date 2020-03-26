@@ -7,14 +7,14 @@ class Account
 
   def deposit(credit)
     @balance += credit
-    @transactions.unshift("\n#{date} || #{credit}.00 || || #{@balance}.00")
+    @transactions.unshift("\n#{date} || #{'%.2f' % credit} || || #{'%.2f' % @balance}")
     
     return "Deposit processed"
   end
 
   def withdraw(debit)
     @balance -= debit
-    @transactions.unshift("\n#{date} || || #{debit}.00 || #{@balance}.00")
+    @transactions.unshift("\n#{date} || || #{'%.2f' % debit} || #{'%.2f' % @balance}")
 
     return "Withdrawl processed"
   end
