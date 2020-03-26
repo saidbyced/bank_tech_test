@@ -8,15 +8,11 @@ class Account
   def deposit(credit)
     @balance += credit
     @transactions.push("\n#{date} || #{'%.2f' % credit} || || #{'%.2f' % @balance}")
-    
-    return "Deposit processed"
   end
 
   def withdraw(debit)
     @balance -= debit
     @transactions.push("\n#{date} || || #{'%.2f' % debit} || #{'%.2f' % @balance}")
-
-    return "Withdrawl processed"
   end
 
   private

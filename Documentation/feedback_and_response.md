@@ -19,8 +19,8 @@ Documentation
 1. Thanks 😊
 2. Absolutely true. I could have made an easy assumption that these values were 'floating point' ones and not hardcoded the zero values. I will recitfy this. ✅
 3. Interesting. I will have a look at unshift as a function and see if I can't come across a more elegant way to store and return the transactions. ✅ - decided on adding transactions in order and resersing the order in the printing
-4. As with point 2, I did not make the simple connection that accounts/banking might work with decimal values. I will recitfy this.
-5. Good to know - I think this is something I personally would have clarified with the client prior to undertaking the work. As part of this, if there is no response how do you write good TDD that checks behaviour instead of state? I will invesitgate this and correct my code.
+4. As with point 2, I did not make the simple connection that accounts/banking might work with decimal values. I will recitfy this. ✅ - see point 2
+5. Good to know - I think this is something I personally would have clarified with the client prior to undertaking the work. As part of this, if there is no response how do you write good TDD that checks behaviour instead of state? I will invesitgate this and correct my code. ✅ - changed tests to check if function runs with correct inputs (which would be most basic tests anyway)
 6. Easy fix - thank you for pointing it out. I made the assumption that this code might well slot into a larger program that has a display interface but I wonder if that is an assumption I should make.
 7. Very interesting indeed. If they don't store balance (even if only in a session) how do they display it..? Something to investigate.
 8. I will absolutely correct this - centralised information is an important UX consideration.

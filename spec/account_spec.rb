@@ -2,11 +2,11 @@ require 'account'
 
 RSpec.describe Account do
   it "should receive a deposit" do
-    expect(subject.deposit(1000)).to eq("Deposit processed")
+    expect(subject.deposit(1000)).to be_truthy
   end
 
   it "should provide a withdrawl" do
-    expect(subject.withdraw(500)).to eq("Withdrawl processed")
+    expect(subject.withdraw(500)).to be_truthy
   end
 
   describe "#print_statement" do
