@@ -54,7 +54,5 @@ RSpec.describe Account do
   
       expect(subject.print_statement).to eq("date || credit || debit || balance\n14/01/2012 || || 123.45 || 1111.11\n10/01/2012 || 1234.56 || || 1234.56")
     end
-
-
   end
 end

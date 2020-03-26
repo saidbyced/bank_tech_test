@@ -7,14 +7,14 @@ class Account
 
   def deposit(credit)
     @balance += credit
-    @transactions.unshift("\n#{date} || #{'%.2f' % credit} || || #{'%.2f' % @balance}")
+    @transactions.push("\n#{date} || #{'%.2f' % credit} || || #{'%.2f' % @balance}")
     
     return "Deposit processed"
   end
 
   def withdraw(debit)
     @balance -= debit
-    @transactions.unshift("\n#{date} || || #{'%.2f' % debit} || #{'%.2f' % @balance}")
+    @transactions.push("\n#{date} || || #{'%.2f' % debit} || #{'%.2f' % @balance}")
 
     return "Withdrawl processed"
   end
@@ -32,7 +32,7 @@ class Account
 
   def statement
     statement = "date || credit || debit || balance"
-    @transactions.each do |transaction|
+    @transactions.reverse_each do |transaction|
       statement += transaction
     end
 
