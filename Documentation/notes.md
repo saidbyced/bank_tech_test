@@ -34,4 +34,4 @@ Assumptions to query with tech test provider:
 - I have made an assumption that transactions are added on the date undertaken. Is this accurate or is it possible the could/would be restrospectively/prospectively added?
 - I have created a class called 'Account' to hold these transactions. Are these being folded into greater logic, and if so, how would you like them provided (if not in this manner)?
 
-Full time taken:  3 hours, 21 minutes.
+Full time taken before initial submission:  3 hours, 21 minutes.
